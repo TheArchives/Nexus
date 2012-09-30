@@ -1,3 +1,5 @@
+# coding=utf-8
+
 # The Nexus software is licensed under the BSD 2-Clause license.
 #
 # You should have recieved a copy of this license with the software.
