@@ -1,2 +1,7 @@
 **/*.py
 *.py
+.idea
+.idea/**
+.idea/*
+.idea/*/*
+.idea/*/*/*
