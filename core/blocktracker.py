@@ -1,8 +1,9 @@
-# Arc is copyright 2009-2011 the Arc team and other contributors.
-# Exxo is modified from Arc by blahblahbal. 
-# Exxo has no affiliation with the Arc team whatsoever.
-# Arc is licensed under the BSD 2-Clause modified License.
-# To view more details, please see the "LICENSING" file in the "docs" folder of the Arc Package.
+# The Nexus software is licensed under the BSD 2-Clause license.
+#
+# You should have recieved a copy of this license with the software.
+# If you did not, you can find one at the following link.
+#
+# http://opensource.org/licenses/bsd-license.php
 
 # This blocktracker was written by Clay Sweetser, AKA Varriount (clay.sweetser@gmail.com)
 
