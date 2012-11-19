@@ -52,6 +52,7 @@ class CoreServerProtocol(Protocol):
         self.sent_first_welcome = False
         self.read_only = False
         self.username = None
+        self.old_username = None
         self.selected_archive_name = None
         self.initial_position = None
         self.last_block_changes = []
@@ -400,6 +401,7 @@ class CoreServerProtocol(Protocol):
             if type == TYPE_INITIAL:
                 # Get the client's details
                 protocol, self.username, mppass, utype = parts
+                self.old_username = self.username
                 if self.identified == True:
                     self.logger.info("Kicked '%s'; already logged in to server" % (self.username))
                     self.sendError("You already logged in! Foolish bot owners.")
@@ -411,11 +413,16 @@ class CoreServerProtocol(Protocol):
                         self.logger.info("Kicked '%s'; invalid password (%s, %s)" % (self.username, mppass, correct_pass))
                         self.sendError("Incorrect authentication. Connect normally instead of Resume.")
                         return
-                self.logger = logging.getLogger(self.username)
-                self.logger.info("Connected, as '%s'" % self.username)
+                if "@" in self.username:
+                    self.username = "~" + self.username.split("@")[0]
+                    self.logger = logging.getLogger(self.username)
+                    self.logger.info("Connected, as '%s' (%s)" % (self.username, self.old_username))
+                else:
+                    self.logger = logging.getLogger(self.username)
+                    self.logger.info("Connected, as '%s'" % self.username)
                 self.identified = True
                 # Are they banned?
-                if self.factory.isBanned(self.username):
+                if (self.factory.isBanned(self.username) or self.factory.isBanned(self.old_username)):
                     self.sendError("You are Banned for: %s" % self.factory.banReason(self.username))
                     return
                 # OK, see if there's anyone else with that username
