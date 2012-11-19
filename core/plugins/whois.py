@@ -132,6 +132,8 @@ class PlayersPlugin(ProtocolPlugin):
                 username = self.client.factory.usernames[parts[1].lower()]
                 if self.client.isAdminPlus():
                     self.client.sendNormalMessage(self.client.factory.usernames[user].userColour()+("%s" % (title))+parts[1]+COLOUR_YELLOW+" "+username.world.id+" | "+str(username.transport.getPeer().host))
+                    if parts[1][0] == "~":
+                        self.client.sendNormalMessage("Also known as %s%s%s." % (COLOUR_RED, self.client.factory.usernames[user].old_username, COLOUR_YELLOW,))
                 else:
                     self.client.sendNormalMessage(self.client.factory.usernames[user].userColour()+("%s" % (title))+parts[1]+COLOUR_YELLOW+" "+username.world.id)
                 if user in INFO_VIPLIST:
