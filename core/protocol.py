@@ -455,28 +455,7 @@ class CoreServerProtocol(Protocol):
                     else:
                         client.sendNormalMessage(COLOUR_PURPLE+"Welcome to the server, %s!" % self.username)
                 if self.factory.irc_relay:
-                    if self.username.lower() in INFO_VIPLIST and not self.isModPlus():
-                        self.factory.irc_relay.sendServerMessage("04iCraft Developer spotted;")
-                    if self.username.lower() in self.factory.owner:
-                        self.factory.irc_relay.sendServerMessage("3[+] 5%s 07has come online." % self.username)
-                    elif self.username.lower() in self.factory.directors:
-                        self.factory.irc_relay.sendServerMessage("3[+] 9%s 07has come online." % self.username)
-                    elif self.username.lower() in self.factory.coders:
-                        self.factory.irc_relay.sendServerMessage("3[+] 6%s 07has come online." % self.username)
-                    elif self.username.lower() in self.factory.admins:
-                        self.factory.irc_relay.sendServerMessage("3[+] 4%s 07has come online." % self.username)
-                    elif self.username.lower() in self.factory.mods:
-                        self.factory.irc_relay.sendServerMessage("3[+] 12%s 07has come online." % self.username)
-                    elif self.username.lower() in self.factory.members:
-                        self.factory.irc_relay.sendServerMessage("3[+] 14%s 07has come online." % self.username)
-                    elif self.username.lower() in self.world.owner:
-                        self.factory.irc_relay.sendServerMessage("3[+] 7%s has come online." % self.username)
-                    elif self.username.lower() in self.world.ops:
-                        self.factory.irc_relay.sendServerMessage("3[+] 10%s 07has come online." % self.username)
-                    elif self.username.lower() in self.world.builders:
-                        self.factory.irc_relay.sendServerMessage("3[+] 11%s 07has come online." % self.username)
-                    else:
-                        self.factory.irc_relay.sendServerMessage("3[+] %s 07has come online." % self.username)
+                    self.factory.irc_relay.sendServerMessage("3[+] %s%s 07has come online." % (self.userColour(), self.username))
                     if self.username.lower() not in self.factory.lastseen:
                         # Duplicate welcome messages to IRC, so that staff there can have a clue when someone is entirely new.
                         self.factory.irc_relay.sendServerMessage("%sWelcome to the server, %s!" % (COLOUR_PURPLE, self.username))
