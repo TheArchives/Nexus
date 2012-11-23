@@ -98,7 +98,7 @@ class CoreServerProtocol(Protocol):
         try:
             self.hooks[hook].remove(func)
         except (KeyError, ValueError):
-            self.logger.warn("Hook '%s' is not registered to %s." % (command, func))
+            self.logger.warn("Hook '%s' is not registered to %s." % (hook, func))
 
     def unloadPlugin(self, plugin_class):
         "Unloads the given plugin class."
@@ -308,7 +308,7 @@ class CoreServerProtocol(Protocol):
     def findUserPartial(self, name):
         users = self.matchPartialUsername(name)
         if len(users)==1:
-            return user[0]
+            return users[0]
         else:
             return None
             
