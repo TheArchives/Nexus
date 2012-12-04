@@ -13,8 +13,8 @@ def Rank(self, parts, fromloc, overriderank, server=None):
     year = time.strftime("%Y")
     month = time.strftime("%m")
     if username == "099":
-        if not (int(year) > 2013 and int(month) > 3):
-            return "099 may not be ranked until April 1st 2012."
+        if not (int(year) > 2012 and int(month) > 3):
+            return "099 may not be ranked until April 1st 2013."
     if server:
         factory = server
     else:
