@@ -10,52 +10,36 @@ VERSION = "v1.1.-1"
 
 INFO_VIPLIST = [
     #AKA: List of awesome people.
-    # Mojang staff (current or retired)
-#    "c418",
-#    "dock",
-#    "ez",
-#    "jeb_",
-#    "kappe",
-#    "mollstam",
-#    "notch",
-    # Founders of blockBox or other products before blockBox
-#    "aera",
-#    "andrewgodwin",
-#    "pixeleater",
-    # Developers/contributors of blockBox
-#    "fizyplankton",
-#    "tyteen4a03",
-#    "uberfox",
-#    "opticalza",
-    # Code contributors to products before blockBox
-    "099",
-#    "adam01",
-#    "andrewph",
-#    "destroyerx1",
-#    "dwarfy",
-#    "erronjason",
-#    "gdude2002",
-#    "goober",
-#    "gothfox",
-#    "kelraider",
-#    "notmeh",
-#    "revenant",
-#    "willempiee",
-#    "varriount",
-    # The Archives Founder
-#    "green_esperon",
-#    "red_link",
-    "bioniclegenius",
-    "joe3355",
-    "blahblahbal",
-#    "alka",
-#    "haxelnut",
+    # Mojang
+    "jeb_",
+    "notch",
+    # Important TA people
+    "aera",
+    "andrewgodwin",
+    "arbot",
+    "Adam01",
+    "aythrea",
+    "NotMeh",
+    "revenant",
+    "tf_holiday", # arbot's new account
+    "tyteen4a03",
+    # Code contributors to products before Arc
+    "destroyerx1",
+    "erronjason",
+    "goober",
+    "kelraider",
+    "willempiee",
+    "varriount",
+    # TA legacy staff
+    "alka",
+    "haxelnut",
     "aexis_rai",
+    "bjzaba",
+    "Animator",
     # Others we give our bows to.
-#    "fragmer",
-#    "pyropyro", 
-#    "tktech"
-     "sanzath"
+    "fragmer",
+    "pyropyro", 
+    "tktech"
     ]
 
 FORMAT_LENGTHS = {
