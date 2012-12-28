@@ -445,7 +445,7 @@ class CoreServerProtocol(Protocol):
                 # Then... this other stuff
                 for client in self.factory.usernames.values():
                     if self.username.lower() in INFO_VIPLIST and not self.isModPlus():
-                        client.sendNormalMessage(COLOUR_DARKRED+"iCraft Developer spotted;")
+                        client.sendNormalMessage(COLOUR_DARKRED+"Awesome person/VIP spotted!")
                     if client.isVisibleStaff():
                         client.sendNormalMessage("%s[+] %s%s &ehas come online." % (COLOUR_DARKGREEN, self.userColour(), self.username))
                     else:
