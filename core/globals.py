@@ -403,14 +403,15 @@ def Staff(self, server=None):
         Temp.append (["Mods:"] + list(factory.mods))
     return Temp
 
-def Credits(self):
+def Credits(self=None):
     Temp = []
-    Temp.append ("Thanks to the following people for making iCraft possible...")
+    Temp.append ("Thanks to the following people for making Arc possible...")
     Temp.append ("Mojang Specifications (Minecraft): Notch, dock, ez, ...")
-    Temp.append ("Creators: aera (Myne and The Archives), PixelEater (MyneCraft), iKJames (iCraft)")
-    Temp.append ("Devs (iCraft): Adam01, AndrewPH, destroyerx1, Dwarfy, erronjason, eugo (Knossus), gdude2002 (arbot), goober, gothfox, NotMeh, ntfwc, revenant, Saanix, sk8rjwd, tehcid, Varriount, willempiee")
+    Temp.append ("Creator: aera (Myne and The Archives)")
+    Temp.append ("Devs (Arc/The Archives): Adam01, gdude2002 (arbot), NotMeh, revenant,")
+    Temp.append ("Devs (iCraft): AndrewPH, destroyerx1, Dwarfy, erronjason, eugo (Knossus), goober, gothfox, ntfwc, Saanix, sk8rjwd, tehcid, Varriount, willempiee")
     Temp.append ("Devs (blockBox): fizyplankton, tyteen4a03, UberFoX")
-    Temp.append ("Others: 099, 2k10, Akai, Antoligy, Aquaskys, Bidoof_King, Bioniclegenius (Red_Link), blahblahbal, BlueProtoman, CDRom, fragmer, GLaDOS (Cortana), iMak, Kelraider, MAup, MystX, PyroPyro, Rils, Roadcrosser, Roujo, setveen, TkTech, Uninspired")
+    Temp.append ("Others: 099, 2k10, Akai, Antoligy, Aquaskys, aythrea, Bidoof_King, Bioniclegenius (Red_Link), blahblahbal, BlueProtoman, CDRom, fragmer, GLaDOS (Cortana), iMak, Kelraider, MAup, MystX, PyroPyro, Rils, Roadcrosser, Roujo, setveen, TheUndeadFish, TkTech, Uninspired")
     return Temp
 
 def makefile(filename):
